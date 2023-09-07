@@ -161,6 +161,11 @@ export const DELETE = async (request) => {
   //perform deletion by using splice or array filter
   DB.enrollments.splice(found, 1);
 
+
+  // const foundData = DB.enrollments.find(
+  //   (x) => x.studentId === studentId && x.courseNo === courseNo
+  // );
+  // DB.enrollments = DB.enrollments.filter(x => x != foundData);
   //if code reach here it means deletion is complete
   return NextResponse.json({
     ok: true,
